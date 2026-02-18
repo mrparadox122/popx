@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Welcome from "./components/Welcome";
+import Login from "./components/Login";
+import Register from "./components/Register";
+import Account from "./components/Account";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default function App() {
+  const [screen, setScreen] = useState("welcome");
+
+  const renderScreen = () => {
+    switch (screen) {
+      case "login":
+        return <Login setScreen={setScreen} />;
+      case "register":
+        return <Register setScreen={setScreen} />;
+      case "account":
+        return <Account setScreen={setScreen} />;
+      default:
+        return <Welcome setScreen={setScreen} />;
+    }
+  };
+
+  return <div className="app-container">{renderScreen()}</div>;
 }
-
-export default App;
