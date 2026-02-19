@@ -5,22 +5,22 @@ export default function Register({ setScreen }) {
     <div>
       <h2 className="title">Create your PopX account</h2>
 
-      <label className="label">Full Name*</label>
+      <label className="label">Full Name<span style={{ color: "red" }}>*</span></label>
       <input className="input" placeholder="Marry Doe" />
 
-      <label className="label">Phone number*</label>
+      <label className="label">Phone number<span style={{ color: "red" }}>*</span></label>
       <input className="input" placeholder="Marry Doe" />
 
-      <label className="label">Email address*</label>
+      <label className="label">Email address<span style={{ color: "red" }}>*</span></label>
       <input className="input" placeholder="Marry Doe" />
 
-      <label className="label">Password*</label>
+      <label className="label">Password<span style={{ color: "red" }}>*</span></label>
       <input className="input" placeholder="Marry Doe" type="password" />
 
       <label className="label">Company name</label>
       <input className="input" placeholder="Marry Doe" />
 
-      <p className="label">Are you an Agency?*</p>
+      <p className="label">Are you an Agency?<span style={{ color: "red" }}>*</span></p>
       <div style={{ marginBottom: 20 }}>
         <label>
           <input type="radio" name="agency" defaultChecked /> Yes
